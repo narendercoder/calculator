@@ -58,7 +58,7 @@
     background-color: transparent;
     text-align: end;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0,0.3);
     font-size: 1.5rem;
 }
 
@@ -67,7 +67,7 @@
     background-color: transparent;
     text-align: end;
     border: none;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
 }
 
@@ -119,12 +119,15 @@ input[type=text]:focus{
     color: #ffffff;
 }
 
-
+.table .equal:active{
+    background-color: #18d4a3;
+}
 
 input[type=checkbox]{
     appearance: none;
     visibility: hidden;
 }
+
 label{
     position: relative;
     display: inline-flex;
@@ -184,12 +187,13 @@ label{
     background-color: #212b41;
 }
 .dark .output .display_output{
-    color: white;
+    color: rgba(255, 255, 255,0.3);
 }
 
 .dark .output .display_answer{
-    color: rgba(255, 255, 255,0.3)
+    color: rgba(255, 255, 255)
 }
+
 
 .dark .table{
     background-color: #2e3951;
