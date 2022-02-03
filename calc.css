@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.container{
+    position: relative;
+    top: 0vh;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #effaf7;
+ 
+}
+
+.wrapper{
+    position: relative;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ecfffb;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0,0.5),
+                0px 0px 50px rgb(0, 0, 0,0.5);
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.6rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 25px;
+
+}
+
+.output .display_output{
+    padding: 10px;
+    background-color: transparent;
+    text-align: end;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+.output .display_answer{
+    padding: 10px;
+    background-color: transparent;
+    text-align: end;
+    border: none;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    border: 0px solid red;
+    background-color: #ffffff;
+}
+
+.layer_1{
+    padding: 10px 0px 10px 0px;
+}
+input[type=button]{
+    position: relative;
+    text-align: center;
+    border:  0px solid black;
+    border-radius: 100%;
+    background: none;
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+input[type=button]:active{
+    background-color: #ecfffb;
+}
+input[type=text]:focus{
+    outline: none;
+}
+.table .operator{
+    background-color: #ecfffb;
+}
+.table .all_clear{
+    background-color: #ecfffb;
+}
+.table .delete{
+    background-color: #ecfffb;
+}
+.table .equal{
+    background-color: #18d4a3;
+    color: #ffffff;
+}
+
+
+
+input[type=checkbox]{
+    appearance: none;
+    visibility: hidden;
+}
+label{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 0px;
+    border: 0px solid red;
+    padding-top: 5px;
+}
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #212b41;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+.check::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+.check::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #212b41;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+   /* dark mode */
+
+.dark .container {
+    background-color: #212b41;
+}
+.dark .calculator{
+    color: rgb(255, 255, 255);
+}
+.dark .wrapper {
+    background-color: #212b41;
+}
+.dark .output .display_output{
+    color: white;
+}
+
+.dark .output .display_answer{
+    color: rgba(255, 255, 255,0.3)
+}
+
+.dark .table{
+    background-color: #2e3951;
+}
+.dark input[type=button]{
+    color: white;
+}
+.dark input[type=button]:active{
+    background-color: #212b41;
+}
+.dark .table .operator{
+    background-color: #212b41;
+    color: #18d4a3;
+}
+.dark .table .all_clear{
+    background-color: #212b41;
+    color: #18d4a3;
+}
+.dark .table .delete{
+    background-color: #212b41;
+    color: #18d4a3;
+}
+.dark .table .equal{
+    color: #212b41;
+}
+
+.dark .check{
+    background-color: #18d4a3;
+    
+}
+
+.dark .check:before{
+    transform: translateX(-50px);
+}
+
+.dark .check:after{
+    transform: translateX(0px);
+}
